@@ -8,7 +8,7 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     """Кастомный обработчик HTTP-запросов"""
 
     def do_GET(self):
-        """Обработка GET-запросов"""
+        """Обработка GET-запросов и вопросов"""
         parsed_path = urlparse(self.path)
         path = parsed_path.path
 
