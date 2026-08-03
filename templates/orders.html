@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Заказы{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Заказы</h1>
+<div class="alert alert-info">
+    <i class="bi bi-info-circle"></i> Здесь будет список ваших заказов.
+</div>
+<div class="list-group">
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+        Заказ #001
+        <span class="badge bg-success rounded-pill">Доставлен</span>
+    </div>
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+        Заказ #002
+        <span class="badge bg-warning rounded-pill">В пути</span>
+    </div>
+    <div class="list-group-item d-flex justify-content-between align-items-center">
+        Заказ #003
+        <span class="badge bg-secondary rounded-pill">Ожидает</span>
+    </div>
+</div>
+{% endblock %}

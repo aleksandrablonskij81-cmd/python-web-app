@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">Главная</h1>
+        <p class="lead mb-5">Вы находитесь на сайте, предназначенном для продажи товаров.</p>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <!-- Товар 1 -->
+    <div class="col">
+        <div class="card product-card h-100">
+            <div class="card-img-top-placeholder">
+                <i class="bi bi-image" style="font-size: 3rem;"></i>
+            </div>
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Товар 1</h5>
+                <h6 class="card-subtitle mb-2 text-primary">$ 100</h6>
+                <p class="card-text small text-muted">
+                    10 users included, 2 GB of storage,<br>
+                    Email support, Help center access
+                </p>
+                <a href="#" class="btn btn-outline-primary mt-auto w-100">Купить</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Товар 2 -->
+    <div class="col">
+        <div class="card product-card h-100">
+            <div class="card-img-top-placeholder">
+                <i class="bi bi-image" style="font-size: 3rem;"></i>
+            </div>
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Товар 2</h5>
+                <h6 class="card-subtitle mb-2 text-primary">$ 100</h6>
+                <p class="card-text small text-muted">
+                    10 users included, 2 GB of storage,<br>
+                    Email support, Help center access
+                </p>
+                <a href="#" class="btn btn-outline-primary mt-auto w-100">Купить</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Товар 3 -->
+    <div class="col">
+        <div class="card product-card h-100">
+            <div class="card-img-top-placeholder">
+                <i class="bi bi-image" style="font-size: 3rem;"></i>
+            </div>
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Товар 3</h5>
+                <h6 class="card-subtitle mb-2 text-primary">$ 100</h6>
+                <p class="card-text small text-muted">
+                    10 users included, 2 GB of storage,<br>
+                    Email support, Help center access
+                </p>
+                <a href="#" class="btn btn-outline-primary mt-auto w-100">Купить</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
