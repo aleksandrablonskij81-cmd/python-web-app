@@ -8,9 +8,13 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     """Кастомный обработчик HTTP-запросов"""
 
     def do_GET(self):
-        """Обработка GET-запросов и вопросов"""
+        """Обработка GET-запросов"""
         parsed_path = urlparse(self.path)
         path = parsed_path.path
+
+        # Убираем слеш в конце для единообразия
+        if path.endswith('/') and len(path) > 1:
+            path = path[:-1]
 
         routes = {
             '/': 'templates/index.html',
@@ -29,6 +33,10 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         """Обработка POST-запросов"""
         parsed_path = urlparse(self.path)
         path = parsed_path.path
+
+        # Убираем слеш в конце
+        if path.endswith('/') and len(path) > 1:
+            path = path[:-1]
 
         if path == '/contacts':
             content_length = int(self.headers.get('Content-Length', 0))
@@ -77,7 +85,7 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(content.encode('utf-8'))
 
         except FileNotFoundError:
-            self.send_error(500, "Внутренняя ошибка: файл не найден")
+            self.send_error(404, "Файл не найден")
         except Exception as e:
             self.send_error(500, f"Внутренняя ошибка: {str(e)}")
 
